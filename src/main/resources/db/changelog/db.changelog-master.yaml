@@ -1,0 +1,114 @@
+databaseChangeLog:
+- changeSet:
+    id: 2020-01-04-occasion
+    author: Ladyka Andrei
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+            name: id
+            type: BIGINT
+        - column:
+            name: name
+            type: varchar(128)
+        - column:
+            name: description
+            type: varchar(2048)
+        - column:
+            name: start
+            type: datetime
+        - column:
+            name: end
+            type: datetime
+        - column:
+            name: created_by
+            type: varchar(128)
+        - column:
+            name: created_date
+            type: datetime
+        - column:
+            name: last_modified_by
+            type: varchar(128)
+        - column:
+            name: last_modified_date
+            type: datetime
+        - column:
+            name: version
+            type: BIGINT
+        tableName: occasions
+
+- changeSet:
+    id: 2020-01-04-person
+    author: Ladyka Andrei
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+            name: id
+            type: BIGINT
+        - column:
+            name: surname
+            type: varchar(128)
+        - column:
+            name: name
+            type: varchar(128)
+        - column:
+            name: fathername
+            type: varchar(128)
+        - column:
+            name: phone
+            type: varchar(128)
+        - column:
+            name: birthday
+            type: date
+        - column:
+            name: created_by
+            type: varchar(128)
+        - column:
+            name: created_date
+            type: datetime
+        - column:
+            name: last_modified_by
+            type: varchar(128)
+        - column:
+            name: last_modified_date
+            type: datetime
+        - column:
+            name: version
+            type: BIGINT
+        tableName: persons
+
+- changeSet:
+    id: 2020-01-04-occasions_has_persons
+    author: Ladyka Andrei
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: person_id
+            type: BIGINT
+        - column:
+            name: occasion_id
+            type: BIGINT
+        - column:
+            name: created_by
+            type: varchar(128)
+        - column:
+            name: created_date
+            type: datetime
+        - column:
+            name: last_modified_by
+            type: varchar(128)
+        - column:
+            name: last_modified_date
+            type: datetime
+        - column:
+            name: version
+            type: BIGINT
+        tableName: occasions_has_persons
