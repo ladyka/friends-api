@@ -1,12 +1,12 @@
 spring:
   liquibase:
-    url: jdbc:postgresql://ec2-54-170-100-209.eu-west-1.compute.amazonaws.com:5432/d2img2uv82un3
-    user: hwqsbtgdgttzmp
-    password: f3c5317acc1a8d10025f25e2818ebe7ec42b124ee689af73bf67174aa621441d
+    url: jdbc:postgresql://${DATABASE_HOST}:5432/${DATABASE_NAME}
+    user: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
   r2dbc:
-    name: d2img2uv82un3
-    url: r2dbc:postgresql://ec2-54-170-100-209.eu-west-1.compute.amazonaws.com:5432/d2img2uv82un3
-    username: hwqsbtgdgttzmp
-    password: f3c5317acc1a8d10025f25e2818ebe7ec42b124ee689af73bf67174aa621441d
+    name: ${DATABASE_NAME}
+    url: r2dbc:postgresql://${DATABASE_HOST}:5432/${DATABASE_NAME}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
 
