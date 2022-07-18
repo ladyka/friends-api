@@ -11,7 +11,4 @@ spring:
     password: ${DATABASE_PASSWORD}
     properties:
       ssl: true
-      sslMode: VERIFY_CA
-      sslRootCert: root.pem
-      sslCert: server.pem
-      sslKey: key.pem
+      sslMode: REQUIRE
