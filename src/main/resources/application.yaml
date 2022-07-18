@@ -9,4 +9,5 @@ spring:
     url: r2dbc:postgresql://${DATABASE_HOST}:5432/${DATABASE_NAME}
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
-
+    properties:
+      ssl: true
