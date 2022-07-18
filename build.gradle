@@ -6,7 +6,7 @@ plugins {
 
 group = 'by.ladyka'
 version = '0.0.1'
-sourceCompatibility = JavaVersion.VERSION_15
+sourceCompatibility = JavaVersion.VERSION_17
 
 configurations {
     compileOnly {
